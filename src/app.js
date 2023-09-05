@@ -33,7 +33,7 @@ app.get("/api/v1/names/:id", (req, res) => {
 			res.status(200).json({
 				status: "success",
 				message: "Product Name fetched successfully",
-				data: { product },
+				data: product,
 			});
 		}
 	} catch (error) {
