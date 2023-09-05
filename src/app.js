@@ -35,8 +35,10 @@ app.get("/api/v1/names/:id", (req, res) => {
 				status: "success",
 				message: "Product Name fetched successfully",
 				data: {
-					[product.name]: product,
-					// product.name: product,
+					// [product.name]: product,
+					// product,
+					id: product.id,
+					name: product.name,
 				},
 			});
 		}
