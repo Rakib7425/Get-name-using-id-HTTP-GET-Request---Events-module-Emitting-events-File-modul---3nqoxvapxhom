@@ -13,9 +13,9 @@ app.use(express.json());
 app.get("/api/v1/names/:id", (req, res) => {
 	try {
 		// console.log(productNames[2]);
-		productNames.map((item) => {
-			console.log(item);
-		});
+		// productNames.map((item) => {
+		// 	console.log(item);
+		// });
 		const productId = parseInt(req.params.id);
 
 		// Find the product by ID
