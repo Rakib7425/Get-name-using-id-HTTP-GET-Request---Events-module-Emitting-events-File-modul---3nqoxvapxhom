@@ -24,7 +24,7 @@ app.get("/api/v1/names/:id", (req, res) => {
 		// console.log(paramId);
 
 		if (typeof paramId !== "number") {
-			return res.status(400).json({ error: "Invalid data types" });
+			return res.status(400).json({ error: "Invalid product id types" });
 		}
 
 		if (!product) {
@@ -33,7 +33,10 @@ app.get("/api/v1/names/:id", (req, res) => {
 			res.status(200).json({
 				status: "success",
 				message: "Product Name fetched successfully",
-				data: product,
+				data: {
+					name: product,
+					// product,
+				},
 			});
 		}
 	} catch (error) {
