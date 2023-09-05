@@ -28,8 +28,9 @@ app.get("/api/v1/names/:id", (req, res) => {
 			return res.status(404).json({ status: "failed", message: "Not found!" });
 		} else if (productNames[paramId - 1]) {
 			res.status(200).json({
-				id: productNames[paramId - 1].id,
-				name: productNames[paramId - 1].name,
+				status: "success",
+				message: "Product Name fetched successfully",
+				data: { id: productNames[paramId - 1].id, name: productNames[paramId - 1].name },
 			});
 		}
 	} catch (error) {
