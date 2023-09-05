@@ -20,9 +20,9 @@ app.get("/api/v1/names/:id", (req, res) => {
 		const paramId = Number(req.params.id);
 		console.log(paramId);
 
-		if (typeof paramId !== "number") {
-			return res.status(400).json({ error: "Invalid data types" });
-		}
+		// if (typeof paramId !== "number") {
+		// 	return res.status(400).json({ error: "Invalid data types" });
+		// }
 
 		if (!productNames[paramId - 1]) {
 			return res.status(404).json({ status: "failed", message: "Not found!" });
