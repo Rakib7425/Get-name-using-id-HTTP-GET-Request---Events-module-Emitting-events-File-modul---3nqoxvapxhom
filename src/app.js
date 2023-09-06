@@ -26,7 +26,7 @@ app.get("/api/v1/names/:id", (req, res) => {
 			// const productName = product.name;
 			res.status(200).json({
 				status: "success",
-				message: "Product Name fetched successfully",
+				message: "Product name fetched successfully",
 				data: {
 					// [product.name]: product,
 					name:product,
