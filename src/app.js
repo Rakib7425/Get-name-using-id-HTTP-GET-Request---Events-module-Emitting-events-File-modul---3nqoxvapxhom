@@ -6,7 +6,7 @@ const app = express();
 const productNames = JSON.parse(fs.readFileSync(`${__dirname}/data/names.json`));
 
 //Middleware
-app.use(express.json());
+// app.use(express.json());
 
 // GET endpoint for sending the products to client by id
 //Endpoint - /api/v1/names/:id
